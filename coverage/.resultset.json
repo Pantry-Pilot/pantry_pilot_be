@@ -195,6 +195,8 @@
           null,
           null,
           null,
+          null,
+          1,
           null
         ]
       },
@@ -215,8 +217,73 @@
           1,
           null
         ]
+      },
+      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/spec/requests/api/v1/create_user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/serializers/users_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1698790223
+    "timestamp": 1698795704
   }
 }
