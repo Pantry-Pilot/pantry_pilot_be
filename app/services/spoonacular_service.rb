@@ -10,8 +10,8 @@ class SpoonacularService
 
   def conn
     Faraday.new(url: "https://api.spoonacular.com") do |f|
-      f.params['apiKey'] = Rails.application.credentials.spoonacular[:key]
       f.headers['Content-Type'] = 'application/json'
+      f.params['apiKey'] = Rails.application.credentials.spoonacular[:key]
     end
   end
 end
