@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/environment.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/application.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/application.rb": {
         "lines": [
           1,
           null,
@@ -53,7 +53,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/boot.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -61,7 +61,7 @@
           1
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/environments/test.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -125,7 +125,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/initializers/cors.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -145,7 +145,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/initializers/filter_parameter_logging.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -157,7 +157,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/initializers/inflections.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -177,7 +177,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/spec/factories/users.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/spec/factories/users.rb": {
         "lines": [
           1,
           1,
@@ -188,7 +188,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/config/routes.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -202,7 +202,7 @@
           null
         ]
       },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/models/user.rb": {
+      "/Users/willchen/turing_work/3mod/projects/pantry_pilot_be/app/services/spoonacular_service.rb": {
         "lines": [
           1,
           1,
@@ -210,123 +210,20 @@
           1,
           null,
           1,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/spec/requests/api/v1/create_user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/spec/requests/api/v1/user_session_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/controllers/api/v1/users_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          0,
-          null,
           null,
           null,
           1,
           null,
           1,
           1,
-          null,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/serializers/users_serializer.rb": {
-        "lines": [
           1,
           1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/antoine/Turing/3mod/projects/PANTRY_PILOT/pantry_pilot_be/app/controllers/api/v1/sessions_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          0,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1698797512
+    "timestamp": 1698852611
   }
 }
