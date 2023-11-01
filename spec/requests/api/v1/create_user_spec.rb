@@ -12,7 +12,6 @@ RSpec.describe "Create A User endpoint" do
       expect(User.count).to eq(1)
       
       response_body = JSON.parse(response.body, symbolize_names: true)
-      require 'pry';binding.pry
 
       expect(response_body[:data]).to be_a(Hash)
       expect(response_body[:data]).to have_key(:id)
