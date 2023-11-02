@@ -1,4 +1,4 @@
 class RecipeSerializer
-  include FastJsonapi::ObjectSerializer
+  include JSONAPI::Serializer
   attributes :id, :title, :image, :summary, :instructions, :ingredients
 end
