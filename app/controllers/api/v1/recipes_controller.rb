@@ -1,9 +1,19 @@
 class Api::V1::RecipesController < ApplicationController
   def search
-    results = SpoonacularService.new.search_recipes(params[:query])
-    recipes = results[:results].map do |recipe_data|
-      Recipe.new(recipe_data)
+    begin
+      recipes = RecipeFacade.search(params[:query])
+      render json: RecipeSerializer.new(recipes)
+    rescue StandardError => e
+      render json: { error: e.message }, status: :unprocessable_entity
     end
-    render json: RecipeSerializer.new(recipes)
+  end
+
+  def show
+    begin
+      recipe = RecipeFacade.find(params[:id])
+      render json: RecipeSerializer.new(recipe)
+    rescue StandardError => e
+      render json: { error: e.message }, status: :unprocessable_entity
+    end
   end
 end
