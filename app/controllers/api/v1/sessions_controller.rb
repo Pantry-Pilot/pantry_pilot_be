@@ -11,13 +11,17 @@ class Api::V1::SessionsController < ApplicationController
   end 
 
   def show
-    user = User.find(params[:id])
-    render json: UsersSerializer.new(user)
+    begin
+      user = User.find(params[:id])
+      render json: UsersSerializer.new(user)
+    rescue ActiveRecord::RecordNotFound
+       render json: {error: "User not found", status: 404}, status: 404
+    end 
   end
 
   private
-
-  def user_params
-    params.permit(:name, :email, :password)
-  end
+  #not needed for the time being
+  # def user_params
+  #   params.permit(:name, :email, :password)
+  # end
 end
