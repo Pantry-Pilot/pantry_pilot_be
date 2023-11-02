@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spoonacular.com/recipes/complexSearch?apiKey=5ba91f3cbeb34d47a5fc0366863104b8&query=31231nfjhaslkjfas82
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 02 Nov 2023 18:23:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '54'
+      Connection:
+      - keep-alive
+      Allow-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, UserId, Hash, Name, Password, Accept, Accept-Language, x-api-key,
+        Content-Language, Content-Type, Cache-Control, Origin, X-Requested-With
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      Allow-Control-Allow-Methods:
+      - GET, HEAD, POST, OPTIONS, DELETE, PUT
+      X-Api-Quota-Request:
+      - '1.0'
+      X-Api-Quota-Used:
+      - '72.91999999999999'
+      X-Api-Quota-Left:
+      - '77.08000000000001'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zALiquSGWMpnJo8x%2BxKS1%2FGLwJBcMBfoToJ8laojMugUn9VHQSJaMIF2tiq5XetlZ%2FTY6broRUpnDSWCTPOj2m%2Fjvc7HLJlbPFE4bhnIE5RaWW3yJneWX4nvVzQ8mOPq4%2Bk3elA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81fe68d08d53ce7c-SJC
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[],"offset":0,"number":10,"totalResults":0}'
+  recorded_at: Thu, 02 Nov 2023 18:23:35 GMT
+recorded_with: VCR 6.2.0

@@ -12,7 +12,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       get '/api/v1/recipes/search', params: { query: 'chicken' }
 
       json = JSON.parse(response.body, symbolize_names: true)
-
+      # require 'pry';binding.pry
       expect(json).to be_a Hash
       expect(json).to have_key(:data)
       expect(json[:data]).to be_an Array
@@ -21,6 +21,12 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       expect(json[:data].first).to have_key(:type)
       expect(json[:data].first).to have_key(:attributes)
       expect(json[:data].count).to eq(10)
+    end
+
+    it "returns an error if no recipes are found" do
+      get '/api/v1/recipes/search', params: { query: '31231nfjhaslkjfas82' }
+
+      expect(response).to_not be_successful
     end
   end
 
@@ -61,6 +67,15 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       expect(json[:data][:attributes][:ingredients].first[:amount]).to be_a Float
       expect(json[:data][:attributes][:ingredients].first).to have_key(:unit)
       expect(json[:data][:attributes][:ingredients].first[:unit]).to be_a String
+    end
+
+    it "returns an error if the recipe is not found" do
+      get '/api/v1/recipes/99999999999999'
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+
+      response_body = JSON.parse(response.body, symbolize_names: true)
     end
   end
 end
