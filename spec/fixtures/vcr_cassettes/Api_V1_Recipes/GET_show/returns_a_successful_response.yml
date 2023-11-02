@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spoonacular.com/recipes/716429/information?apiKey=5ba91f3cbeb34d47a5fc0366863104b8
+    uri: https://api.spoonacular.com/recipes/637876/information?apiKey=5ba91f3cbeb34d47a5fc0366863104b8
     body:
       encoding: US-ASCII
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 02 Nov 2023 14:22:26 GMT
+      - Thu, 02 Nov 2023 14:52:47 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '7544'
+      - '8127'
       Connection:
       - keep-alive
       Allow-Control-Allow-Origin:
@@ -42,79 +42,24 @@ http_interactions:
       X-Api-Quota-Request:
       - '1.0'
       X-Api-Quota-Used:
-      - '4.2'
+      - '6.2'
       X-Api-Quota-Left:
-      - '145.8'
+      - '143.8'
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=i8b4B7FTId%2Bn8m3XSGQzUtHiip4Tzycy58Pg8O04zauPNMOJwPq53Gs4am7KumhI4CUhtJhO2eYMsmFODyoLnnBVjENl7TvzSJLtvQSE1omQgN2PQPystnkDtJ3hrOTfjr8mpyU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Bf5jiqS2dJZmSFGHIKU1zeId9CZPuZD2bZ2KxQtMXKsAy6TSoBp4gziRIPjV6Dm%2BCSfBgvYmIueLmSpQVUqZayBIHzQFIJPeVLTTwqQzJ2k1ODg%2BgZt0Ant5%2Be4MK9gDSWrkyE0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 81fd0792acaf4df1-MCI
+      - 81fd34079d044e00-MCI
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"vegetarian":false,"vegan":false,"glutenFree":false,"dairyFree":false,"veryHealthy":false,"cheap":false,"veryPopular":false,"sustainable":false,"lowFodmap":false,"weightWatcherSmartPoints":16,"gaps":"no","preparationMinutes":-1,"cookingMinutes":-1,"aggregateLikes":209,"healthScore":18,"creditsText":"Full
-        Belly Sisters","license":"CC BY-SA 3.0","sourceName":"Full Belly Sisters","pricePerServing":157.06,"extendedIngredients":[{"id":1001,"aisle":"Milk,
-        Eggs, Other Dairy","image":"butter-sliced.jpg","consistency":"SOLID","name":"butter","nameClean":"butter","original":"1
-        tbsp butter","originalName":"butter","amount":1.0,"unit":"tbsp","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"},"metric":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"}}},{"id":10011135,"aisle":"Produce","image":"cauliflower.jpg","consistency":"SOLID","name":"cauliflower
-        florets","nameClean":"cauliflower florets","original":"about 2 cups frozen
-        cauliflower florets, thawed, cut into bite-sized pieces","originalName":"about
-        frozen cauliflower florets, thawed, cut into bite-sized pieces","amount":2.0,"unit":"cups","meta":["frozen","thawed","cut
-        into bite-sized pieces"],"measures":{"us":{"amount":2.0,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":200.0,"unitShort":"g","unitLong":"grams"}}},{"id":1038,"aisle":"Cheese","image":"parmesan.jpg","consistency":"SOLID","name":"cheese","nameClean":"pecorino
-        romano","original":"2 tbsp grated cheese (I used romano)","originalName":"grated
-        cheese (I used romano)","amount":2.0,"unit":"tbsp","meta":["grated","(I used
-        romano)"],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":1034053,"aisle":"Oil,
-        Vinegar, Salad Dressing","image":"olive-oil.jpg","consistency":"LIQUID","name":"extra
-        virgin olive oil","nameClean":"extra virgin olive oil","original":"1-2 tbsp
-        extra virgin olive oil","originalName":"extra virgin olive oil","amount":1.0,"unit":"tbsp","meta":[],"measures":{"us":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"},"metric":{"amount":1.0,"unitShort":"Tbsp","unitLong":"Tbsp"}}},{"id":11215,"aisle":"Produce","image":"garlic.png","consistency":"SOLID","name":"garlic","nameClean":"garlic","original":"5-6
-        cloves garlic","originalName":"garlic","amount":5.0,"unit":"cloves","meta":[],"measures":{"us":{"amount":5.0,"unitShort":"cloves","unitLong":"cloves"},"metric":{"amount":5.0,"unitShort":"cloves","unitLong":"cloves"}}},{"id":10720420,"aisle":"Pasta
-        and Rice","image":"spaghetti.jpg","consistency":"SOLID","name":"pasta","nameClean":"linguine","original":"6-8
-        ounces pasta (I used linguine)","originalName":"pasta (I used linguine)","amount":6.0,"unit":"ounces","meta":["(I
-        used linguine)"],"measures":{"us":{"amount":6.0,"unitShort":"oz","unitLong":"ounces"},"metric":{"amount":170.097,"unitShort":"g","unitLong":"grams"}}},{"id":1032009,"aisle":"Spices
-        and Seasonings","image":"red-pepper-flakes.jpg","consistency":"SOLID","name":"couple
-        of pepper flakes","nameClean":"red pepper flakes","original":"couple of pinches
-        red pepper flakes, optional","originalName":"couple of red pepper flakes,
-        optional","amount":2.0,"unit":"pinches","meta":["red"],"measures":{"us":{"amount":2.0,"unitShort":"pinches","unitLong":"pinches"},"metric":{"amount":2.0,"unitShort":"pinches","unitLong":"pinches"}}},{"id":1102047,"aisle":"Spices
-        and Seasonings","image":"salt-and-pepper.jpg","consistency":"SOLID","name":"salt
-        and pepper","nameClean":"salt and pepper","original":"salt and pepper, to
-        taste","originalName":"salt and pepper, to taste","amount":2.0,"unit":"servings","meta":["to
-        taste"],"measures":{"us":{"amount":2.0,"unitShort":"servings","unitLong":"servings"},"metric":{"amount":2.0,"unitShort":"servings","unitLong":"servings"}}},{"id":11291,"aisle":"Produce","image":"spring-onions.jpg","consistency":"SOLID","name":"scallions","nameClean":"spring
-        onions","original":"3 scallions, chopped, white and green parts separated","originalName":"scallions,
-        chopped, white and green parts separated","amount":3.0,"unit":"","meta":["white","green","separated","chopped"],"measures":{"us":{"amount":3.0,"unitShort":"","unitLong":""},"metric":{"amount":3.0,"unitShort":"","unitLong":""}}},{"id":14106,"aisle":"Alcoholic
-        Beverages","image":"white-wine.jpg","consistency":"LIQUID","name":"white wine","nameClean":"dry
-        white wine","original":"2-3 tbsp white wine","originalName":"white wine","amount":2.0,"unit":"tbsp","meta":[],"measures":{"us":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"},"metric":{"amount":2.0,"unitShort":"Tbsps","unitLong":"Tbsps"}}},{"id":99025,"aisle":"Pasta
-        and Rice","image":"breadcrumbs.jpg","consistency":"SOLID","name":"bread crumbs","nameClean":"whole
-        wheat breadcrumbs","original":"1/4 cup whole wheat bread crumbs (I used panko)","originalName":"whole
-        wheat bread crumbs (I used panko)","amount":0.25,"unit":"cup","meta":["whole
-        wheat","(I used panko)"],"measures":{"us":{"amount":0.25,"unitShort":"cups","unitLong":"cups"},"metric":{"amount":27.0,"unitShort":"g","unitLong":"grams"}}}],"id":716429,"title":"Pasta
-        with Garlic, Scallions, Cauliflower & Breadcrumbs","readyInMinutes":45,"servings":2,"sourceUrl":"http://fullbellysisters.blogspot.com/2012/06/pasta-with-garlic-scallions-cauliflower.html","image":"https://spoonacular.com/recipeImages/716429-556x370.jpg","imageType":"jpg","summary":"You
-        can never have too many main course recipes, so give Pasta with Garlic, Scallions,
-        Cauliflower & Breadcrumbs a try. One serving contains <b>543 calories</b>,
-        <b>17g of protein</b>, and <b>16g of fat</b>. For <b>$1.57 per serving</b>,
-        this recipe <b>covers 22%</b> of your daily requirements of vitamins and minerals.
-        This recipe serves 2. A mixture of butter, white wine, pasta, and a handful
-        of other ingredients are all it takes to make this recipe so yummy. 209 people
-        have tried and liked this recipe. It is brought to you by fullbellysisters.blogspot.com.
-        From preparation to the plate, this recipe takes approximately <b>45 minutes</b>.
-        Taking all factors into account, this recipe <b>earns a spoonacular score
-        of 83%</b>, which is tremendous. If you like this recipe, take a look at these
-        similar recipes: <a href=\"https://spoonacular.com/recipes/pasta-with-garlic-scallions-cauliflower-breadcrumbs-1230187\">Pasta
-        with Garlic, Scallions, Cauliflower & Breadcrumbs</a>, <a href=\"https://spoonacular.com/recipes/pasta-with-garlic-scallions-cauliflower-breadcrumbs-1229807\">Pasta
-        with Garlic, Scallions, Cauliflower & Breadcrumbs</a>, and <a href=\"https://spoonacular.com/recipes/pasta-with-garlic-scallions-cauliflower-breadcrumbs-1229669\">Pasta
-        with Garlic, Scallions, Cauliflower & Breadcrumbs</a>.","cuisines":[],"dishTypes":["side
-        dish","lunch","main course","main dish","dinner"],"diets":[],"occasions":[],"winePairing":{"pairedWines":[],"pairingText":"No
-        one wine will suit every pasta dish. Pasta in a tomato-based sauce will usually
-        work well with a medium-bodied red, such as a montepulciano or chianti. Pasta
-        with seafood or pesto will fare better with a light-bodied white, such as
-        a pinot grigio. Cheese-heavy pasta can pair well with red or white - you might
-        try a sangiovese wine for hard cheeses and a chardonnay for soft cheeses.
-        We may be able to make a better recommendation if you ask again with a specific
-        pasta dish.","productMatches":[]},"instructions":"","analyzedInstructions":[],"originalId":null,"spoonacularSourceUrl":"https://spoonacular.com/pasta-with-garlic-scallions-cauliflower-breadcrumbs-716429"}'
-  recorded_at: Thu, 02 Nov 2023 14:22:26 GMT
+      string: !binary |-
+        eyJ2ZWdldGFyaWFuIjpmYWxzZSwidmVnYW4iOmZhbHNlLCJnbHV0ZW5GcmVlIjp0cnVlLCJkYWlyeUZyZWUiOmZhbHNlLCJ2ZXJ5SGVhbHRoeSI6ZmFsc2UsImNoZWFwIjpmYWxzZSwidmVyeVBvcHVsYXIiOmZhbHNlLCJzdXN0YWluYWJsZSI6ZmFsc2UsImxvd0ZvZG1hcCI6ZmFsc2UsIndlaWdodFdhdGNoZXJTbWFydFBvaW50cyI6MiwiZ2FwcyI6Im5vIiwicHJlcGFyYXRpb25NaW51dGVzIjotMSwiY29va2luZ01pbnV0ZXMiOi0xLCJhZ2dyZWdhdGVMaWtlcyI6NiwiaGVhbHRoU2NvcmUiOjYsImNyZWRpdHNUZXh0IjoiRm9vZGlzdGEuY29tIOKAkyBUaGUgQ29va2luZyBFbmN5Y2xvcGVkaWEgRXZlcnlvbmUgQ2FuIEVkaXQiLCJsaWNlbnNlIjoiQ0MgQlkgMy4wIiwic291cmNlTmFtZSI6IkZvb2Rpc3RhIiwicHJpY2VQZXJTZXJ2aW5nIjoxMTUuMTMsImV4dGVuZGVkSW5ncmVkaWVudHMiOlt7ImlkIjo1MDYyLCJhaXNsZSI6Ik1lYXQiLCJpbWFnZSI6ImNoaWNrZW4tYnJlYXN0cy5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImNoaWNrZW4gYnJlYXN0IiwibmFtZUNsZWFuIjoiY2hpY2tlbiBicmVhc3QiLCJvcmlnaW5hbCI6IjUwMCBncmFtcyBib25lbGVzcyBjaGlja2VuIGJyZWFzdCIsIm9yaWdpbmFsTmFtZSI6ImJvbmVsZXNzIGNoaWNrZW4gYnJlYXN0IiwiYW1vdW50Ijo1MDAuMCwidW5pdCI6ImdyYW1zIiwibWV0YSI6WyJib25lbGVzcyJdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjEuMTAyLCJ1bml0U2hvcnQiOiJsYiIsInVuaXRMb25nIjoicG91bmRzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjUwMC4wLCJ1bml0U2hvcnQiOiJnIiwidW5pdExvbmciOiJncmFtcyJ9fX0seyJpZCI6MjAwOSwiYWlzbGUiOiJTcGljZXMgYW5kIFNlYXNvbmluZ3MiLCJpbWFnZSI6ImNoaWxpLXBvd2Rlci5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImNoaWxpIHBvd2RlciIsIm5hbWVDbGVhbiI6ImNoaWxpIHBvd2RlciIsIm9yaWdpbmFsIjoiMi0zIHRzcCBjaGlsaSBwb3dkZXIiLCJvcmlnaW5hbE5hbWUiOiJjaGlsaSBwb3dkZXIiLCJhbW91bnQiOjIuMCwidW5pdCI6InRzcCIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn0sIm1ldHJpYyI6eyJhbW91bnQiOjIuMCwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn19fSx7ImlkIjoxMDExMTIxNSwiYWlzbGUiOiJFdGhuaWMgRm9vZHMiLCJpbWFnZSI6ImdhcmxpYy1wYXN0ZS5wbmciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6ImdpbmdlciBhbmQgZ2FybGljIHBhc3RlIiwibmFtZUNsZWFuIjoiZ2FybGljIHBhc3RlIiwib3JpZ2luYWwiOiI0IHRic3AgR2luZ2VyIGFuZCBHYXJsaWMgcGFzdGUiLCJvcmlnaW5hbE5hbWUiOiJHaW5nZXIgYW5kIEdhcmxpYyBwYXN0ZSIsImFtb3VudCI6NC4wLCJ1bml0IjoidGJzcCIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0IjoiVGJzcHMiLCJ1bml0TG9uZyI6IlRic3BzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjQuMCwidW5pdFNob3J0IjoiVGJzcHMiLCJ1bml0TG9uZyI6IlRic3BzIn19fSx7ImlkIjoyMDQ3LCJhaXNsZSI6IlNwaWNlcyBhbmQgU2Vhc29uaW5ncyIsImltYWdlIjoic2FsdC5qcGciLCJjb25zaXN0ZW5jeSI6IlNPTElEIiwibmFtZSI6InNhbHQiLCJuYW1lQ2xlYW4iOiJ0YWJsZSBzYWx0Iiwib3JpZ2luYWwiOiLCvSB0YnNwLiBzYWx0Iiwib3JpZ2luYWxOYW1lIjoic2FsdCIsImFtb3VudCI6MC41LCJ1bml0IjoidGJzcCIsIm1ldGEiOltdLCJtZWFzdXJlcyI6eyJ1cyI6eyJhbW91bnQiOjAuNSwidW5pdFNob3J0IjoiVGJzcHMiLCJ1bml0TG9uZyI6IlRic3BzIn0sIm1ldHJpYyI6eyJhbW91bnQiOjAuNSwidW5pdFNob3J0IjoiVGJzcHMiLCJ1bml0TG9uZyI6IlRic3BzIn19fSx7ImlkIjoyMDQzLCJhaXNsZSI6IlNwaWNlcyBhbmQgU2Vhc29uaW5ncyIsImltYWdlIjoidHVybWVyaWMuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJ0dXJtZXJpYyBwb3dkZXIiLCJuYW1lQ2xlYW4iOiJ0dXJtZXJpYyIsIm9yaWdpbmFsIjoiMS80IHRzcCBUdXJtZXJpYyBwb3dkZXIiLCJvcmlnaW5hbE5hbWUiOiJUdXJtZXJpYyBwb3dkZXIiLCJhbW91bnQiOjAuMjUsInVuaXQiOiJ0c3AiLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50IjowLjI1LCJ1bml0U2hvcnQiOiJ0c3BzIiwidW5pdExvbmciOiJ0ZWFzcG9vbnMifSwibWV0cmljIjp7ImFtb3VudCI6MC4yNSwidW5pdFNob3J0IjoidHNwcyIsInVuaXRMb25nIjoidGVhc3Bvb25zIn19fSx7ImlkIjoxMTE2LCJhaXNsZSI6Ik1pbGssIEVnZ3MsIE90aGVyIERhaXJ5IiwiaW1hZ2UiOiJwbGFpbi15b2d1cnQuanBnIiwiY29uc2lzdGVuY3kiOiJTT0xJRCIsIm5hbWUiOiJ5b2d1cnQiLCJuYW1lQ2xlYW4iOiJ5b2d1cnQiLCJvcmlnaW5hbCI6IjQgdGJzcCB5b2d1cnQiLCJvcmlnaW5hbE5hbWUiOiJ5b2d1cnQiLCJhbW91bnQiOjQuMCwidW5pdCI6InRic3AiLCJtZXRhIjpbXSwibWVhc3VyZXMiOnsidXMiOnsiYW1vdW50Ijo0LjAsInVuaXRTaG9ydCI6IlRic3BzIiwidW5pdExvbmciOiJUYnNwcyJ9LCJtZXRyaWMiOnsiYW1vdW50Ijo0LjAsInVuaXRTaG9ydCI6IlRic3BzIiwidW5pdExvbmciOiJUYnNwcyJ9fX1dLCJpZCI6NjM3ODc2LCJ0aXRsZSI6IkNoaWNrZW4gNjUiLCJyZWFkeUluTWludXRlcyI6NDUsInNlcnZpbmdzIjo2LCJzb3VyY2VVcmwiOiJodHRwOi8vd3d3LmZvb2Rpc3RhLmNvbS9yZWNpcGUvRzRYUExLQlcvY2hpY2tlbi02NS1jaGlja2VuLW1hcmluYWRlZC1pbi10cmFkaXRpb25hbC1pbmRpYW4tc3BpY2VzLWFuZC1kZWVwLWZyaWVkIiwiaW1hZ2UiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVJbWFnZXMvNjM3ODc2LTU1NngzNzAuanBnIiwiaW1hZ2VUeXBlIjoianBnIiwic3VtbWFyeSI6IkNoaWNrZW4gNjUgY291bGQgYmUganVzdCB0aGUgPGI+Z2x1dGVuIGZyZWU8L2I+IHJlY2lwZSB5b3UndmUgYmVlbiBsb29raW5nIGZvci4gVGhpcyBob3IgZCdvZXV2cmUgaGFzIDxiPjEyMSBjYWxvcmllczwvYj4sIDxiPjE5ZyBvZiBwcm90ZWluPC9iPiwgYW5kIDxiPjNnIG9mIGZhdDwvYj4gcGVyIHNlcnZpbmcuIEZvciA8Yj4kMS4xNSBwZXIgc2VydmluZzwvYj4sIHRoaXMgcmVjaXBlIDxiPmNvdmVycyAxMSU8L2I+IG9mIHlvdXIgZGFpbHkgcmVxdWlyZW1lbnRzIG9mIHZpdGFtaW5zIGFuZCBtaW5lcmFscy4gVGhpcyByZWNpcGUgc2VydmVzIDYuIEhlYWQgdG8gdGhlIHN0b3JlIGFuZCBwaWNrIHVwIHNhbHQsIGNoaWxpIHBvd2RlciwgeW9ndXJ0LCBhbmQgYSBmZXcgb3RoZXIgdGhpbmdzIHRvIG1ha2UgaXQgdG9kYXkuIDYgcGVvcGxlIGhhdmUgbWFkZSB0aGlzIHJlY2lwZSBhbmQgd291bGQgbWFrZSBpdCBhZ2Fpbi4gSXQgaXMgYnJvdWdodCB0byB5b3UgYnkgRm9vZGlzdGEuIEZyb20gcHJlcGFyYXRpb24gdG8gdGhlIHBsYXRlLCB0aGlzIHJlY2lwZSB0YWtlcyBhcHByb3hpbWF0ZWx5IDxiPjQ1IG1pbnV0ZXM8L2I+LiBPdmVyYWxsLCB0aGlzIHJlY2lwZSBlYXJucyBhIDxiPm5vdCBzbyBzcGVjdGFjdWxhciBzcG9vbmFjdWxhciBzY29yZSBvZiAzOSU8L2I+LiBTaW1pbGFyIHJlY2lwZXMgYXJlIDxhIGhyZWY9XCJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVzL2ktYWludC1jaGlja2VuLWNoaWNrZW4tY3Jpc3B5LXJvYXN0ZWQtY2hpY2tlbi1icmVhc3RzLXdpdGgtb3JhbmdlLWFuZC1jYXJkYW1vbS0xMjQzMjUxXCI+SSBBaW4ndCBDaGlja2VuIENoaWNrZW46IENyaXNweSBSb2FzdGVkIENoaWNrZW4gQnJlYXN0cyB3aXRoIE9yYW5nZSBhbmQgQ2FyZGFtb208L2E+LCA8YSBocmVmPVwiaHR0cHM6Ly9zcG9vbmFjdWxhci5jb20vcmVjaXBlcy9pLWFpbnQtY2hpY2tlbi1jaGlja2VuLWNyaXNweS1yb2FzdGVkLWNoaWNrZW4tYnJlYXN0cy13aXRoLW9yYW5nZS1hbmQtY2FyZGFtb20tMTIzMDA1OVwiPkkgQWluJ3QgQ2hpY2tlbiBDaGlja2VuOiBDcmlzcHkgUm9hc3RlZCBDaGlja2VuIEJyZWFzdHMgd2l0aCBPcmFuZ2UgYW5kIENhcmRhbW9tPC9hPiwgYW5kIDxhIGhyZWY9XCJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9yZWNpcGVzL2ktYWludC1jaGlja2VuLWNoaWNrZW4tY3Jpc3B5LXJvYXN0ZWQtY2hpY2tlbi1icmVhc3RzLXdpdGgtb3JhbmdlLWFuZC1jYXJkYW1vbS0xMjI0MzIxXCI+SSBBaW4ndCBDaGlja2VuIENoaWNrZW46IENyaXNweSBSb2FzdGVkIENoaWNrZW4gQnJlYXN0cyB3aXRoIE9yYW5nZSBhbmQgQ2FyZGFtb208L2E+LiIsImN1aXNpbmVzIjpbXSwiZGlzaFR5cGVzIjpbImFudGlwYXN0aSIsInN0YXJ0ZXIiLCJzbmFjayIsImFwcGV0aXplciIsImFudGlwYXN0byIsImhvciBkJ29ldXZyZSJdLCJkaWV0cyI6WyJnbHV0ZW4gZnJlZSJdLCJvY2Nhc2lvbnMiOltdLCJ3aW5lUGFpcmluZyI6eyJwYWlyZWRXaW5lcyI6WyJzcGFya2xpbmcgd2luZSIsInNwYXJrbGluZyByb3NlIl0sInBhaXJpbmdUZXh0IjoiU3BhcmtsaW5nIFdpbmUgYW5kIFNwYXJrbGluZyByb3PDqSBhcmUgbXkgdG9wIHBpY2tzIGZvciBBbnRpcGFzdGkuIElmIHlvdSdyZSBzZXJ2aW5nIGEgc2VsZWN0aW9uIG9mIGFwcGV0aXplcnMsIHlvdSBjYW4ndCBnbyB3cm9uZyB3aXRoIHRoZXNlLiBCb3RoIGFyZSB2ZXJ5IGZvb2QgZnJpZW5kbHkgYW5kIGNvbXBsZW1lbnQgYSB2YXJpZXR5IG9mIGZsYXZvcnMuIFRoZSBGYW1pbGxlIFZpbmNlbnQgQ3JlbWFudCBkZSBCb3VyZ29nbmUgd2l0aCBhIDQgb3V0IG9mIDUgc3RhciByYXRpbmcgc2VlbXMgbGlrZSBhIGdvb2QgbWF0Y2guIEl0IGNvc3RzIGFib3V0IDI0IGRvbGxhcnMgcGVyIGJvdHRsZS4iLCJwcm9kdWN0TWF0Y2hlcyI6W3siaWQiOjEzMDI5NTUxLCJ0aXRsZSI6IkZhbWlsbGUgVmluY2VudCBDcmVtYW50IGRlIEJvdXJnb2duZSIsImRlc2NyaXB0aW9uIjoiRnJvbSB0aGUgQ2hhcmRvbm5heSBncmFwZXMgdGhpcyBzcGFya2xlciBhbGxpZXMgZnJlc2huZXNzLCBib2R5LCBhbmQgc21vb3RobmVzcy4gVGhlIENyZW1hbnQgQnJ1dCBpcyBkcnkgYW5kIG9mZmVycyBmaW5lIGJ1YmJsZXMgKDEuNSBNaWxsaW9uLzMwIG1pbnV0ZXMgLSB3ZSBjb3VudGVkIHRoZW0gYnV0IHlvdSBkbyBub3QgaGF2ZSB0byBiZWxpZXZlIG1lIGZvciB0aGlzISksIGhpbnRzIG9mIGZsb3dlcnMgYXQgdGhlIG5vc2UsIGNyaXNwIGFuZCBmcnVpdHkgb24gdGhlIHBhbGF0ZS4gSXQgaXMgYSBncmVhdCBDbGFzc2ljIGZvciBhbGwgZmVzdGl2ZSBvY2Nhc2lvbnMuIiwicHJpY2UiOiIkMjMuOTg5OTk5NzcxMTE4MTY0IiwiaW1hZ2VVcmwiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9wcm9kdWN0SW1hZ2VzLzEzMDI5NTUxLTMxMngyMzEuanBnIiwiYXZlcmFnZVJhdGluZyI6MC44MDAwMDAwMTE5MjA5MjksInJhdGluZ0NvdW50Ijo4OC4wLCJzY29yZSI6MC43OTYyMjY0MjcwMTUyNjg2LCJsaW5rIjoiaHR0cHM6Ly9jbGljay5saW5rc3luZXJneS5jb20vZGVlcGxpbms/aWQ9KlFDaUlTNnQ0Z0EmbWlkPTIwMjUmbXVybD1odHRwcyUzQSUyRiUyRnd3dy53aW5lLmNvbSUyRnByb2R1Y3QlMkZmYW1pbGxlLXZpbmNlbnQtY3JlbWFudC1kZS1ib3VyZ29nbmUlMkYxNjY0NzAifV19LCJpbnN0cnVjdGlvbnMiOiI8b2w+PGxpPlRha2UgYSBsYXJnZSBib3dsIG1peCBpbiB0aGUgZ2luZ2VyIGFuZCBnYXJsaWMgcGFzdGUsIHlvZ3VydCwgcmVkIGNoaWxseSBwb3dkZXIsIHR1cm1lcmljIHBvd2RlciwgYW5kIHNhbHQuPC9saT48bGk+TWl4IHdlbGwgdG8gZnJvbSBzbW9vdGggYW5kIHRoaWNrIHBhc3RlLCBhZGQgdGhlIGNoaWNrZW4gcGllY2VzIHRvIHRoZSBtYXNhbGEgcGFzdGUgYW5kICBtYXJpbmFkZWQgZm9yIDQgaG91cnMuPC9saT48bGk+SGVhdCBlbm91Z2ggb2lsIGluIGEgcGFuIHRvIGRlZXAgZnJ5IHRoZSBtYXJpbmFkZWQgY2hpY2tlbiBwaWVjZXMuIERlZXAgZnJ5IHRoZSBjaGlja2VuIHBpZWNlcyBpbiBiYXRjaGVzIHRpbGwgY3Jpc3AgYW5kIGdvbGRlbiBjb2xvci48L2xpPjxsaT5Ob3RlOiBUaGUgdGFzdGUgb2YgdGhlIENoaWNrZW4gNjUgZGVwZW5kcyBtYWlubHkgb24gdGhlIGFtb3VudCBvZiB0aW1lIGl0IGdldHMgbWFyaW5hdGVkIGluIHRoZSBtYXNhbGEsIGl0IGlzIGJlc3QgdG8gbWFyaW5hdGUgdGhlIGNoaWNrZW4gcGllY2VzIHRoZSBkYXkgYmVmb3JlLjwvbGk+PC9vbD4iLCJhbmFseXplZEluc3RydWN0aW9ucyI6W3sibmFtZSI6IiIsInN0ZXBzIjpbeyJudW1iZXIiOjEsInN0ZXAiOiJUYWtlIGEgbGFyZ2UgYm93bCBtaXggaW4gdGhlIGdpbmdlciBhbmQgZ2FybGljIHBhc3RlLCB5b2d1cnQsIHJlZCBjaGlsbHkgcG93ZGVyLCB0dXJtZXJpYyBwb3dkZXIsIGFuZCBzYWx0LiIsImluZ3JlZGllbnRzIjpbeyJpZCI6MjA0MywibmFtZSI6InR1cm1lcmljIiwibG9jYWxpemVkTmFtZSI6InR1cm1lcmljIiwiaW1hZ2UiOiJ0dXJtZXJpYy5qcGcifSx7ImlkIjoyMDA5LCJuYW1lIjoiY2hpbGkgcG93ZGVyIiwibG9jYWxpemVkTmFtZSI6ImNoaWxpIHBvd2RlciIsImltYWdlIjoiY2hpbGktcG93ZGVyLmpwZyJ9LHsiaWQiOjEwMTExMjE1LCJuYW1lIjoiZ2FybGljIHBhc3RlIiwibG9jYWxpemVkTmFtZSI6ImdhcmxpYyBwYXN0ZSIsImltYWdlIjoiZ2FybGljLXBhc3RlLnBuZyJ9LHsiaWQiOjExMjE2LCJuYW1lIjoiZ2luZ2VyIiwibG9jYWxpemVkTmFtZSI6ImdpbmdlciIsImltYWdlIjoiZ2luZ2VyLnBuZyJ9LHsiaWQiOjExMTYsIm5hbWUiOiJ5b2d1cnQiLCJsb2NhbGl6ZWROYW1lIjoieW9ndXJ0IiwiaW1hZ2UiOiJwbGFpbi15b2d1cnQuanBnIn0seyJpZCI6MjA0NywibmFtZSI6InNhbHQiLCJsb2NhbGl6ZWROYW1lIjoic2FsdCIsImltYWdlIjoic2FsdC5qcGcifV0sImVxdWlwbWVudCI6W3siaWQiOjQwNDc4MywibmFtZSI6ImJvd2wiLCJsb2NhbGl6ZWROYW1lIjoiYm93bCIsImltYWdlIjoiYm93bC5qcGcifV19LHsibnVtYmVyIjoyLCJzdGVwIjoiTWl4IHdlbGwgdG8gZnJvbSBzbW9vdGggYW5kIHRoaWNrIHBhc3RlLCBhZGQgdGhlIGNoaWNrZW4gcGllY2VzIHRvIHRoZSBtYXNhbGEgcGFzdGUgYW5kICBtYXJpbmFkZWQgZm9yIDQgaG91cnMuIiwiaW5ncmVkaWVudHMiOlt7ImlkIjoxMDA1MDA2LCJuYW1lIjoiY2hpY2tlbiBwaWVjZXMiLCJsb2NhbGl6ZWROYW1lIjoiY2hpY2tlbiBwaWVjZXMiLCJpbWFnZSI6ImNoaWNrZW4tcGFydHMuanBnIn1dLCJlcXVpcG1lbnQiOltdLCJsZW5ndGgiOnsibnVtYmVyIjoyNDAsInVuaXQiOiJtaW51dGVzIn19LHsibnVtYmVyIjozLCJzdGVwIjoiSGVhdCBlbm91Z2ggb2lsIGluIGEgcGFuIHRvIGRlZXAgZnJ5IHRoZSBtYXJpbmFkZWQgY2hpY2tlbiBwaWVjZXMuIERlZXAgZnJ5IHRoZSBjaGlja2VuIHBpZWNlcyBpbiBiYXRjaGVzIHRpbGwgY3Jpc3AgYW5kIGdvbGRlbiBjb2xvci5Ob3RlOiBUaGUgdGFzdGUgb2YgdGhlIENoaWNrZW4gNjUgZGVwZW5kcyBtYWlubHkgb24gdGhlIGFtb3VudCBvZiB0aW1lIGl0IGdldHMgbWFyaW5hdGVkIGluIHRoZSBtYXNhbGEsIGl0IGlzIGJlc3QgdG8gbWFyaW5hdGUgdGhlIGNoaWNrZW4gcGllY2VzIHRoZSBkYXkgYmVmb3JlLiIsImluZ3JlZGllbnRzIjpbeyJpZCI6MTAwNTAwNiwibmFtZSI6ImNoaWNrZW4gcGllY2VzIiwibG9jYWxpemVkTmFtZSI6ImNoaWNrZW4gcGllY2VzIiwiaW1hZ2UiOiJjaGlja2VuLXBhcnRzLmpwZyJ9LHsiaWQiOjAsIm5hbWUiOiJjaGlja2VuIiwibG9jYWxpemVkTmFtZSI6ImNoaWNrZW4iLCJpbWFnZSI6Indob2xlLWNoaWNrZW4uanBnIn0seyJpZCI6NDU4MiwibmFtZSI6ImNvb2tpbmcgb2lsIiwibG9jYWxpemVkTmFtZSI6ImNvb2tpbmcgb2lsIiwiaW1hZ2UiOiJ2ZWdldGFibGUtb2lsLmpwZyJ9XSwiZXF1aXBtZW50IjpbeyJpZCI6NDA0NjQ1LCJuYW1lIjoiZnJ5aW5nIHBhbiIsImxvY2FsaXplZE5hbWUiOiJmcnlpbmcgcGFuIiwiaW1hZ2UiOiJwYW4ucG5nIn1dfV19XSwib3JpZ2luYWxJZCI6bnVsbCwic3Bvb25hY3VsYXJTb3VyY2VVcmwiOiJodHRwczovL3Nwb29uYWN1bGFyLmNvbS9jaGlja2VuLTY1LTYzNzg3NiJ9
+  recorded_at: Thu, 02 Nov 2023 14:52:47 GMT
 recorded_with: VCR 6.2.0

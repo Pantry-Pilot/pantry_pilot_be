@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :id, :title, :image, :summary, :ingredients, :instructions
+  attr_reader :id, :title, :image, :summary, :instructions, :ingredients
 
   def initialize(attributes)
     @id = attributes[:id]
@@ -7,14 +7,6 @@ class Recipe
     @image = attributes[:image]
     @summary = attributes[:summary] || ""
     @instructions = attributes[:instructions] || ""
-    @ingredients = attributes[:extendedIngredients] ? map_ingredients(attributes[:extendedIngredients]) : []
-  end
-
-  private
-
-  def map_ingredients(ingredients_data)
-    ingredients_data.map do |ingredient_data|
-      Ingredient.new(ingredient_data)
-    end
+    @ingredients = attributes[:extendedIngredients] || []
   end
 end

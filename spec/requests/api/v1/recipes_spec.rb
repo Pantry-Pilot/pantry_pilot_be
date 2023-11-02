@@ -26,7 +26,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
 
   describe 'GET #show', :vcr do
     it 'returns a successful response' do
-      get '/api/v1/recipes/716429'
+      get '/api/v1/recipes/637876'
 
       expect(response).to be_successful
     end
@@ -53,14 +53,14 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       expect(json[:data][:attributes]).to have_key(:ingredients)
       expect(json[:data][:attributes][:ingredients]).to be_an Array
       expect(json[:data][:attributes][:ingredients].first).to be_a Hash
-      expect(json[:data][:attributes][:ingredients].first[:data]).to have_key(:id)
-      expect(json[:data][:attributes][:ingredients].first[:data][:id]).to be_a String
-      expect(json[:data][:attributes][:ingredients].first[:data][:attributes]).to have_key(:name)
-      expect(json[:data][:attributes][:ingredients].first[:data][:attributes][:name]).to be_a String
-      expect(json[:data][:attributes][:ingredients].first[:data][:attributes]).to have_key(:amount)
-      expect(json[:data][:attributes][:ingredients].first[:data][:attributes][:amount]).to be_a Float
-      expect(json[:data][:attributes][:ingredients].first[:data][:attributes]).to have_key(:unit)
-      expect(json[:data][:attributes][:ingredients].first[:data][:attributes][:unit]).to be_a String
+      expect(json[:data][:attributes][:ingredients].first).to have_key(:id)
+      expect(json[:data][:attributes][:ingredients].first[:id]).to be_a Integer
+      expect(json[:data][:attributes][:ingredients].first).to have_key(:name)
+      expect(json[:data][:attributes][:ingredients].first[:name]).to be_a String
+      expect(json[:data][:attributes][:ingredients].first).to have_key(:amount)
+      expect(json[:data][:attributes][:ingredients].first[:amount]).to be_a Float
+      expect(json[:data][:attributes][:ingredients].first).to have_key(:unit)
+      expect(json[:data][:attributes][:ingredients].first[:unit]).to be_a String
     end
   end
 end
