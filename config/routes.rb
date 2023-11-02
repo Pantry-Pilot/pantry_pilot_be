@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/api/v1/recipes/search', to: 'api/v1/recipes#search'
 
   get 'api/v1/users/:id', to: 'api/v1/sessions#show'
+  get '/api/v1/recipes/:id', to: 'api/v1/recipes#show'
 end

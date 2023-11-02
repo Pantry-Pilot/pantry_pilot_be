@@ -5,6 +5,12 @@ class SpoonacularService
     end
     JSON.parse(response.body, symbolize_names: true)
   end
+  
+  def find_recipe(id)
+    response = conn.get("/recipes/#{id}/information")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
 
   private
 
