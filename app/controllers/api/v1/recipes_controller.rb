@@ -7,4 +7,13 @@ class Api::V1::RecipesController < ApplicationController
       render json: { error: e.message }, status: :unprocessable_entity
     end
   end
+
+  def show
+    begin
+      recipe = RecipeFacade.find(params[:id])
+      render json: RecipeSerializer.new(recipe)
+    rescue StandardError => e
+      render json: { error: e.message }, status: :unprocessable_entity
+    end
+  end
 end

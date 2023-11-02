@@ -4,6 +4,7 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
   describe 'GET #search', :vcr do
     it 'returns a successful response' do
       get '/api/v1/recipes/search', params: { query: 'chicken' }
+
       expect(response).to be_successful
     end
 
