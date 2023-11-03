@@ -1,10 +1,10 @@
 class Api::V1::RecipesController < ApplicationController
   def search
-    begin
-      recipes = RecipeFacade.search(params[:query])
+    recipes = RecipeFacade.search(params[:query])
+    if !recipes.empty? 
       render json: RecipeSerializer.new(recipes)
-    rescue StandardError => e
-      render json: { error: e.message }, status: :unprocessable_entity
+    else 
+      render json: { error: "No recipes match those key words", status: 421 }, status: :unprocessable_entity
     end
   end
 
@@ -13,7 +13,7 @@ class Api::V1::RecipesController < ApplicationController
       recipe = RecipeFacade.find(params[:id])
       render json: RecipeSerializer.new(recipe)
     rescue StandardError => e
-      render json: { error: e.message }, status: :unprocessable_entity
+      render json: { error: "Recipe not found!", status: 421 }, status: :unprocessable_entity
     end
   end
 end
