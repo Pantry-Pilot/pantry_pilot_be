@@ -12,7 +12,6 @@ RSpec.describe 'Api::V1::Recipes', type: :request do
       get '/api/v1/recipes/search', params: { query: 'chicken' }
 
       json = JSON.parse(response.body, symbolize_names: true)
-      # require 'pry';binding.pry
       expect(json).to be_a Hash
       expect(json).to have_key(:data)
       expect(json[:data]).to be_an Array

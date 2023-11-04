@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   get 'api/v1/users/:id', to: 'api/v1/sessions#show'
   get '/api/v1/recipes/:id', to: 'api/v1/recipes#show'
+
+  post 'api/v1/add_recipe', to: 'api/v1/recipes#create'
+
+  get 'api/v1/user_recipes', to: 'api/v1/user_recipes#index'
 end

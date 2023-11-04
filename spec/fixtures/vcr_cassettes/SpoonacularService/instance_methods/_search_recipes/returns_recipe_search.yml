@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 01 Nov 2023 15:27:09 GMT
+      - Sat, 04 Nov 2023 01:09:16 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -42,19 +42,19 @@ http_interactions:
       X-Api-Quota-Request:
       - '1.1'
       X-Api-Quota-Used:
-      - '1.1'
+      - '20.1'
       X-Api-Quota-Left:
-      - '148.9'
+      - '129.9'
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XQctCh%2FyKh%2F%2BZJVvf%2BIi5mn55rD7JfvRYaIKXPazGdgy906uHhcLClLd23QhT9jClmmbrZAthbmdEKvm0mIfsefnBR4QsJ4EY7IgBm6AmZyBqvvghhVs%2FaPtHlIyM2wJcPkItsM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tCE%2BSUYjpEDqR8Hvs1s8r2b2x8hT3E9EshnfckB6u%2FXWGknRpUOZaoOSrDeIn5PcG%2FlUPqe2NiwECoYRmFRd4w2f82pKy%2BcFnRsV257HCe7%2FaPwPrq1%2F3%2FS3g8JZPvrIaoss3Rw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 81f52901faab4e03-MCI
+      - 8208f8757d942524-SJC
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -69,5 +69,5 @@ http_interactions:
         Porridge","image":"https://spoonacular.com/recipeImages/638257-312x231.jpg","imageType":"jpg"},{"id":637999,"title":"Chicken
         Burritos","image":"https://spoonacular.com/recipeImages/637999-312x231.jpg","imageType":"jpg"},{"id":638125,"title":"Chicken
         In A Pot","image":"https://spoonacular.com/recipeImages/638125-312x231.jpg","imageType":"jpg"}],"offset":0,"number":10,"totalResults":633}'
-  recorded_at: Wed, 01 Nov 2023 15:27:09 GMT
+  recorded_at: Sat, 04 Nov 2023 01:09:16 GMT
 recorded_with: VCR 6.2.0
