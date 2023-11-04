@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post 'api/v1/add_recipe', to: 'api/v1/recipes#create'
 
   get '/api/v1/user_recipes/:user_id', to: 'api/v1/user_recipes#index'
+
+  delete '/api/v1/delete_recipe', to: 'api/v1/user_recipes#destroy'
 end
