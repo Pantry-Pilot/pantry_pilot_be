@@ -18,13 +18,18 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def create
-    Recipe.create!(recipe_params)
-    UserRecipe.create!(user_id: params[:user_id], recipe_id: params[:id])
+    user = User.find(user_params[:user_id])
+    recipe = Recipe.create!(recipe_params)
+    UserRecipe.create(user_id: user.id, recipe_id: recipe.id)
   end
 
   private
 
   def recipe_params
-    params.permit(:id, :title, :image, :summary, :instructions, :ingredients)
+    params.permit(:recipe_id, :title, :image, :summary, :instructions, :ingredients)
+  end
+
+  def user_params
+    params.permit(:user_id)
   end
 end

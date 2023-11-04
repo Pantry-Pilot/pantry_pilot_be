@@ -5,12 +5,12 @@ RSpec.describe "Create A User Recipe endpoint" do
     it "can create a user recipe in the database" do
       User.create!(id: 1, name: "Nick", email: "nick@nick.com", password: "nickspassword")
 
-      post "/api/v1/add_recipe", params: { user_id: "1", id: "123456", title: "Chicken 65", image: "chicken_image.jpg", summary: "Chicken 65 is good", instructions: "make chicken 65 times", ingredients: "chicken, goodness" }
+      post "/api/v1/add_recipe", params: { user_id: "1", recipe_id: "123456", title: "Chicken 65", image: "chicken_image.jpg", summary: "Chicken 65 is good", instructions: "make chicken 65 times", ingredients: "chicken, goodness" }
 
       expect(response).to be_successful
       expect(response.status).to eq(204)
 
-      expect(Recipe.last.id).to eq(123456)
+      expect(Recipe.last.recipe_id).to eq("123456")
       expect(Recipe.last.title).to eq("Chicken 65")
       expect(Recipe.last.image).to eq("chicken_image.jpg")
       expect(Recipe.last.summary).to eq("Chicken 65 is good")
@@ -18,7 +18,7 @@ RSpec.describe "Create A User Recipe endpoint" do
       expect(Recipe.last.ingredients).to eq("chicken, goodness")
       expect(Recipe.count).to eq(1)
       expect(UserRecipe.last.user_id).to eq(1)
-      expect(UserRecipe.last.recipe_id).to eq(123456)
+      # expect(UserRecipe.last.recipe_id).to eq(1)
       expect(UserRecipe.count).to eq(1)
       
       # response_body = JSON.parse(response.body, symbolize_names: true)

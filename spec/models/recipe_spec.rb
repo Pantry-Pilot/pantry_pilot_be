@@ -7,12 +7,12 @@ RSpec.describe Recipe, type: :model do
   end
 
   describe "validations" do
-    it { should validate_presence_of :id }
+    it { should validate_presence_of :recipe_id }
   end
 
   describe 'initialize' do
     it 'sets the id, title, image, summary, instructions, and ingredients attributes' do
-      recipe = Recipe.create!(id: 1, title: 'Pancakes', image: 'pancakes.jpg', summary: "it's pancakes", instructions: "pour batter, flip", ingredients: "flour, eggs, milk")
+      recipe = Recipe.create!(id: 1, recipe_id: "122345", title: 'Pancakes', image: 'pancakes.jpg', summary: "it's pancakes", instructions: "pour batter, flip", ingredients: "flour, eggs, milk")
       expect(recipe.id).to eq(1)
       expect(recipe.title).to eq('Pancakes')
       expect(recipe.image).to eq('pancakes.jpg')
