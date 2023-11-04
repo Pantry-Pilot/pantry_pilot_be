@@ -1,6 +1,6 @@
 class Recipe < ApplicationRecord
-  has_many :user_recipes
+  has_many :user_recipes, dependent: :destroy
   has_many :users, through: :user_recipes
 
-  validates :id, presence: true
+  validates :recipe_id, presence: true
 end
