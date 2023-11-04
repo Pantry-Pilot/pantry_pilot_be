@@ -1,12 +1,6 @@
-class Recipe
-  attr_reader :id, :title, :image, :summary, :instructions, :ingredients
+class Recipe < ApplicationRecord
+  has_many :user_recipes
+  has_many :users, through: :user_recipes
 
-  def initialize(attributes)
-    @id = attributes[:id]
-    @title = attributes[:title]
-    @image = attributes[:image]
-    @summary = attributes[:summary] || ""
-    @instructions = attributes[:instructions] || ""
-    @ingredients = attributes[:extendedIngredients] || []
-  end
+  validates :id, presence: true
 end
