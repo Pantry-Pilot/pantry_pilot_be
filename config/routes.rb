@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   post 'api/v1/add_recipe', to: 'api/v1/recipes#create'
 
-  get 'api/v1/user_recipes', to: 'api/v1/user_recipes#index'
+  get '/api/v1/user_recipes/:user_id', to: 'api/v1/user_recipes#index'
 end
