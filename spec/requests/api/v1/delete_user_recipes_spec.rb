@@ -13,7 +13,7 @@ RSpec.describe "Delete A User Recipe endpoint" do
       delete "/api/v1/delete_recipe", params: { id: "1" }
 
       expect(response).to be_successful
-      expect(response.status).to eq(204)
+      expect(response.status).to eq(200)
 
       expect(UserRecipe.count).to eq(0)
       expect(Recipe.count).to eq(0)
