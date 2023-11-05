@@ -6,6 +6,10 @@ class Api::V1::UserRecipesController < ApplicationController
 
   def destroy
     recipe = Recipe.find(params[:id])
-    recipe.destroy
+    if recipe.destroy
+      render json: { status: 204, notice: "Recipe successfully removed" }
+    else
+      render json: { status: 500, error: "Recipe not deleted" }
+    end
   end
 end
