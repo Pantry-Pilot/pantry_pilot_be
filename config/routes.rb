@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/api/v1/user_recipes/:user_id', to: 'api/v1/user_recipes#index'
 
+  post '/api/v1/email_recipe', to: 'api/v1/emails#send_email_recipe'
+
   delete '/api/v1/delete_recipe', to: 'api/v1/user_recipes#destroy'
 
   get "/api/v1/auth/google_oauth2/callback", to: "api/v1/sessions#oauth"
