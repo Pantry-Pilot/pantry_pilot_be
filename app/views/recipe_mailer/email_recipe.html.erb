@@ -1,4 +1,31 @@
-<h1>Hey there...your friend, <%= @sender.name %> wanted you to have this recipe!</h1>
+  <div style="max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    
+    <h1 style="color: #4A90E2; text-align: center;">Hey there! Your friend, <%= @sender.name %> wanted you to have this recipe!</h1>
 
-<p> <%= @recipe.title %> </p>
-<p> <%= @recipe.summary %></p>
+    <p style="font-size: 18px; font-weight: bold; text-align: center;"> <%= @recipe.title %> </p>
+    <div style="text-align: center;">
+      <%= image_tag(@recipe.image, alt: @recipe.title, style: "max-width: 100%; height: auto; border-radius: 4px;") %>
+    </div>
+    <p style="text-align: justify; line-height: 1.6;"> <%= @recipe.summary.gsub(/<a\b[^>]*>(.*?)<\/a>/i, '\1').html_safe %> </p>
+    
+    <h3 style="border-bottom: 2px solid #4A90E2; padding-bottom: 5px;">Ingredients</h3>
+    
+    <% @ingredients.each do |ingredient| %>
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="background: #f9f9f9; margin-bottom: 5px; padding: 10px; border-radius: 4px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+        <%= "#{ingredient[:amount]} #{ingredient[:unit]} #{ingredient[:name]}" %>
+      </li>
+    </ul>
+    <% end %>
+
+    <h3 style="border-bottom: 2px solid #4A90E2; padding-bottom: 5px;">Instructions</h3>
+    
+    <div style="background: #eef2f7; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+      <p style="text-align: justify; line-height: 1.6;"> <%= raw @recipe.instructions %> </p>
+    </div>
+
+  </div>
+
+
+
+
