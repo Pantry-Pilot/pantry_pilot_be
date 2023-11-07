@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get '/api/v1/user_recipes/:user_id', to: 'api/v1/user_recipes#index'
 
   delete '/api/v1/delete_recipe', to: 'api/v1/user_recipes#destroy'
+
+  patch '/api/v1/add_image', to: 'api/v1/recipes#update'
 end
