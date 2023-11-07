@@ -1,3 +1,6 @@
+require 'sidekiq/web'
+
+
 Rails.application.routes.draw do
   post "/api/v1/register", to: "api/v1/users#create"
   post "/api/v1/login", to: "api/v1/sessions#create"
@@ -16,4 +19,6 @@ Rails.application.routes.draw do
   delete '/api/v1/delete_recipe', to: 'api/v1/user_recipes#destroy'
 
   get "/api/v1/auth/google_oauth2/callback", to: "api/v1/sessions#oauth"
+
+  mount Sidekiq::Web => '/sidekiq'
 end
