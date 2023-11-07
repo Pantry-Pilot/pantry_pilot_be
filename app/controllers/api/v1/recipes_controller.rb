@@ -30,6 +30,19 @@ class Api::V1::RecipesController < ApplicationController
     end
   end
 
+  def update
+    begin
+    recipe = Recipe.find(params[:id])
+    if recipe.update(updated_recipe_params)
+      render json: { notice: "Image uploaded succesfully", status: 200 }
+    else
+      render json: { error: recipe.errors.full_messages.to_sentence, status: 400 }
+    end
+    rescue ActiveRecord::RecordNotFound => e
+      render json: { error: e.message, status: 404 }, status: :not_found
+    end
+  end
+
   private
 
   def recipe_params
@@ -38,5 +51,9 @@ class Api::V1::RecipesController < ApplicationController
 
   def user_params
     params.permit(:user_id)
+  end
+
+  def updated_recipe_params
+    params.permit(:id, :image_upload)
   end
 end
