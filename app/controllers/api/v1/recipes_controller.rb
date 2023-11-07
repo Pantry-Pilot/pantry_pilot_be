@@ -19,12 +19,9 @@ class Api::V1::RecipesController < ApplicationController
 
   def create
     begin
-    user = User.find(user_params[:user_id])
-    recipe = Recipe.create(recipe_params)
-    user_recipe= UserRecipe.create(user_id: user.id, recipe_id: recipe.id)
-    # if !recipe.save
-    #   render json: { error: "Recipe not saved!", status: 421 }, status: :unprocessable_entity
-    # end
+      user = User.find(user_params[:user_id])
+      recipe = Recipe.create(recipe_params)
+      user_recipe = UserRecipe.create(user_id: user.id, recipe_id: recipe.id)
     rescue ActiveRecord::RecordNotFound => e
       render json: { error: e.message, status: 404 }, status: :not_found
     end

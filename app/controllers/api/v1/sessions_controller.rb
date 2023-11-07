@@ -19,6 +19,15 @@ class Api::V1::SessionsController < ApplicationController
     end 
   end
 
+  def oauth
+    user = User.find_by(email: params[:email])
+    if user
+      render json: UsersSerializer.new(user), status: 201
+    else
+      render json: { error: "User not found", status: 400 }, status: 400
+    end
+  end 
+
   private
   #not needed for the time being
   # def user_params
