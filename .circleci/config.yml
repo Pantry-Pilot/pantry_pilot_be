@@ -3,7 +3,7 @@ orbs:
    node: circleci/node@5.0.0 # Needed for javascript runti
    heroku: circleci/heroku@1.0.1 # Use the Heroku orb in your config
 jobs: # a collection of steps
-  build-and-test: # runs not using Workflows must have a `build` job as entry point
+  build-and-test: # runs not using Workflows must have a `build` job as entry poi
     docker: # run the steps with Docker
       - image: cimg/ruby:3.2.2 
       - image: circleci/redis:latest
