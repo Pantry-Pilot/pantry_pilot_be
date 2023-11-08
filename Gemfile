@@ -52,6 +52,7 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'rspec-rails'
+  gem 'omniauth'
 end
 
 group :development do
