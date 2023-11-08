@@ -1,5 +1,5 @@
 class UserRecipesSerializer
   include JSONAPI::Serializer
-  attributes :recipe_id, :title, :image#, :image_upload
+  attributes :recipe_id, :title, :image
 
 end
