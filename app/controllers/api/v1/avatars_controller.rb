@@ -1,28 +1,8 @@
 class Api::V1::AvatarsController < ApplicationController
   def create
-    recipe = Recipe.find(params[:id])
+    recipe = Recipe.find(params[:recipe][:id])
+    avatar = params[:recipe][:avatar]
 
-    avatar = params[:avatar]
-
-    require 'pry';binding.pry
-    # require 'tempfile'
-    # require 'action_dispatch/http/upload'
-    
-    # file_string = params[:avatar]
-    
-    # content_type = "image/png"
-    # original_name = "roller_coaster.png"
-
-    # tempfile = Tempfile.new
-    # tempfile.binmode
-    # tempfile.write(file_string)
-    # tempfile.rewind
-
-    # uploaded_file = ActionDispatch::Http::UploadedFile.new(
-    # tempfile: tempfile,
-    # type: content_type,
-    # filename: original_name
-    # )
     recipe.avatar.attach(avatar)
     
     if recipe.avatar.attached?
