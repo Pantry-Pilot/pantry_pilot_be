@@ -4,7 +4,7 @@ class Recipe < ApplicationRecord
 
   validates :recipe_id, presence: true
 
-  has_one_attached :image
+  has_one_attached :avatar, service: :amazon
   
   serialize :ingredients, JSON
 
