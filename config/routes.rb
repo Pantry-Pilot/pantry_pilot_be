@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   delete '/api/v1/delete_recipe', to: 'api/v1/user_recipes#destroy'
 
   post '/api/v1/add_image', to: 'api/v1/avatars#create'
+  delete '/api/v1/delete_image', to: 'api/v1/avatars#destroy'
   
   get "/api/v1/auth/google_oauth2/callback", to: "api/v1/sessions#oauth"
 
