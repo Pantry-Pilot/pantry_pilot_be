@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spoonacular.com/recipes/complexSearch?apiKey=f3b99c9bb611436f915a5c0ce00fe9b0&query=chicken
+    uri: https://api.spoonacular.com/recipes/complexSearch?apiKey=b0199b4a27f54cc4b852fa4728c9c7f1&query=chicken
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Nov 2023 02:48:56 GMT
+      - Wed, 08 Nov 2023 22:32:28 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -42,19 +42,19 @@ http_interactions:
       X-Api-Quota-Request:
       - '1.1'
       X-Api-Quota-Used:
-      - '69.5'
+      - '7.199999999999999'
       X-Api-Quota-Left:
-      - '80.5'
+      - '142.8'
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gOnUzU3GH93iEkSnnQdW57hOhNylxmYd0KKDMe4%2BgqPjgWkeBTRfZz2MjzYqecaZfbi6phPITKZKz13x0wiL5jovGP3V2fQheXq9NNgeuxk9y6vCAlBhD7xecF%2BTk5BOllKp134%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fuJj04z4EP%2FXE3%2F7A%2FXy38dpdMrs%2FnhJcMrKBNJoH4yWXTrP94iJ1QsOHcjKDyyj9HXlXq67lpmEJxKwahT7oENte5CLqvXzRJZ2ndQPutbZTIZZGeghztQdpZP5pP4uJjGD0HU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 82224295aa09cee5-SJC
+      - 823145a6cc235c1e-SJC
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -69,5 +69,5 @@ http_interactions:
         Porridge","image":"https://spoonacular.com/recipeImages/638257-312x231.jpg","imageType":"jpg"},{"id":637999,"title":"Chicken
         Burritos","image":"https://spoonacular.com/recipeImages/637999-312x231.jpg","imageType":"jpg"},{"id":638125,"title":"Chicken
         In A Pot","image":"https://spoonacular.com/recipeImages/638125-312x231.jpg","imageType":"jpg"}],"offset":0,"number":10,"totalResults":633}'
-  recorded_at: Tue, 07 Nov 2023 02:48:56 GMT
+  recorded_at: Wed, 08 Nov 2023 22:32:28 GMT
 recorded_with: VCR 6.2.0

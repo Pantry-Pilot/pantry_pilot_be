@@ -53,6 +53,8 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'rspec-rails'
+
+  gem 'omniauth'
 end
 
 group :development do
@@ -61,4 +63,6 @@ group :development do
 end
 
 gem 'dotenv-rails'
+gem "sidekiq"
+
 

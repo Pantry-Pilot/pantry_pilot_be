@@ -61,4 +61,33 @@ RSpec.describe "Create A User endpoint" do
       expect(response_body[:status]).to eq(404)
     end
   end 
+
+  describe 'GET /api/v1/auth/google_oauth2/callback' do
+    context 'when user exists and email is verified' do
+      it 'returns 201 and the user id' do
+        user = create(:user)
+        mock_oauth_data = {
+          email: user.email,
+        }
+
+        get '/api/v1/auth/google_oauth2/callback', params: mock_oauth_data
+        expect(response).to have_http_status(:created)
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:data][:id]).to eq(user.id.to_s)
+      end
+    end
+
+    context 'when user does not exist' do
+      it 'returns 400 and an error message' do
+        mock_oauth_data = {
+            email: 'imposter@example.com',
+          }
+
+        get '/api/v1/auth/google_oauth2/callback', params: mock_oauth_data
+        expect(response).to have_http_status(:bad_request)
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:error]).to eq('User not found')
+      end
+    end
+  end
 end

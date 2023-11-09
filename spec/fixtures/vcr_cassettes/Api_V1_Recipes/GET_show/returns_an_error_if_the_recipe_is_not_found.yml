@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spoonacular.com/recipes/99999999999999/information?apiKey=f3b99c9bb611436f915a5c0ce00fe9b0
+    uri: https://api.spoonacular.com/recipes/99999999999999/information?apiKey=b0199b4a27f54cc4b852fa4728c9c7f1
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 07 Nov 2023 02:48:59 GMT
+      - Wed, 08 Nov 2023 22:32:31 GMT
       Content-Type:
       - text/html;charset=utf-8
       Transfer-Encoding:
@@ -42,13 +42,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4WOPYdFIyG0Cw4D210Rqnil0F6fcPcyBvLjTfqq3U0p%2F%2FwnXZL7kCbGjKKBZAnWaXQBP%2Fr0LQ%2BTCl5o5dmjclYvw2o4fe7%2FiGrjnOaDGnensH5C2au7O3I9X2ClWocep74jZDdk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IQZU%2BBjuAYOtgq%2FpYCrZfGheoUTDu51c3RqRRjdmAEI%2FKzsOwQyXkCNwZ4SH9BKUociyYJwSk%2BYflnob9uA1dq%2FdrPCwKdiEdXvGBVXINxarCchVkmI5xm%2F3HKkl5GmpQCogwEQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 822242ab7fd397cd-SJC
+      - 823145bb4ca59456-SJC
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -65,5 +65,5 @@ http_interactions:
         report</p><p><b>message</b> <u>Not Found</u></p><p><b>description</b> <u>The
         requested resource is not available.</u></p><HR size="1" noshade="noshade"><h3>Apache
         Tomcat/6.0.37</h3></body></html>'
-  recorded_at: Tue, 07 Nov 2023 02:48:59 GMT
+  recorded_at: Wed, 08 Nov 2023 22:32:31 GMT
 recorded_with: VCR 6.2.0

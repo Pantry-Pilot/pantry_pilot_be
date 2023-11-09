@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.spoonacular.com/recipes/complexSearch?apiKey=f3b99c9bb611436f915a5c0ce00fe9b0&query=31231nfjhaslkjfas82
+    uri: https://api.spoonacular.com/recipes/complexSearch?apiKey=b0199b4a27f54cc4b852fa4728c9c7f1&query=31231nfjhaslkjfas82
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Nov 2023 02:48:57 GMT
+      - Wed, 08 Nov 2023 22:32:29 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -42,23 +42,23 @@ http_interactions:
       X-Api-Quota-Request:
       - '1.0'
       X-Api-Quota-Used:
-      - '71.6'
+      - '9.299999999999999'
       X-Api-Quota-Left:
-      - '78.4'
+      - '140.7'
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=m2VzbHv8FyPl4%2F8O8DD3aHCoMh30PkI6WCDeypp%2BNtePf32JxfcfeDdjl7vRJAbQzllJR3eGXmCtMoPmQtRrq0jqzbaDAMFTXThRIhaO765MMHMbBpBlzuqfCJSk8aZ%2BJx64B4Q%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vnigLSRyyZW6B6E47%2FHnOHewoALn%2BsWH9jNd0bsiTQUsvDrTzo476FjzUPCFrsC9uaaIKc8Wqj6RHb2BBMg2ym8O23tBLMplPXsxtwnF%2FzoP%2BJJV8fuApNd4hCmmbyjx%2Fout3Hc%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 8222429ecb922548-SJC
+      - 823145af0ae3cf41-SJC
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"results":[],"offset":0,"number":10,"totalResults":0}'
-  recorded_at: Tue, 07 Nov 2023 02:48:57 GMT
+  recorded_at: Wed, 08 Nov 2023 22:32:29 GMT
 recorded_with: VCR 6.2.0
