@@ -24,7 +24,7 @@ class Api::V1::SessionsController < ApplicationController
     if user
       render json: UsersSerializer.new(user), status: 201
     else
-      render json: { error: "User not found", status: 400 }, status: 400
+      render json: { error: "User not found - Please create an account first before signing up with logging in with google", status: 400 }, status: 400
     end
   end 
 
