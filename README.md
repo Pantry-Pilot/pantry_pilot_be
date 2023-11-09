@@ -47,11 +47,43 @@ This Ruby backend application is designed to interact with the Spoonacular API a
 - ShouldaMatchers
 
 ## Getting Started
-To set up this backend application locally, you will need to run both the backend and the frontend applications. Run `rails s` to start the server.  The front end uses https://localhost:3000 to access this server on https://localhost:5000. 
+To set up this backend application locally, you will need to run both the backend and the frontend applications. Run `rails s` to start the server.  The front end uses https://localhost:3000 to access this server on https://localhost:5000. Also run `redis-server` and `bundle exec sidekiq` on back end servers to allow the background workers to run.
 
 ## Schema
 ```
-create_table "recipes", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2023_11_06_154607) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum"
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "recipes", force: :cascade do |t|
     t.string "recipe_id"
     t.string "title"
     t.string "image"
@@ -77,10 +109,15 @@ create_table "recipes", force: :cascade do |t|
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "user_recipes", "recipes"
   add_foreign_key "user_recipes", "users"
+end
   ```
 
 ## Endpoints
@@ -99,8 +136,123 @@ post '/api/v1/add_image', to: 'api/v1/avatars#create'
 delete '/api/v1/delete_image', to: 'api/v1/avatars#destroy'
 ``` 
 
+## Example Resquest Reponse
+Request
+```
+#<ActionDispatch::Request GET "http://localhost:5000/api/v1/recipes/637876" for ::1>
+```
+Response
+```
+#<RecipeSerializer:0x000000011ec1ae70
+ @fieldsets={},
+ @params={},
+ @resource=
+  #<ApiRecipe:0x000000011d8f7690
+   @id=637876,
+   @image="https://spoonacular.com/recipeImages/637876-556x370.jpg",
+   @ingredients=
+    [{:id=>5062,
+      :aisle=>"Meat",
+      :image=>"chicken-breasts.png",
+      :consistency=>"SOLID",
+      :name=>"chicken breast",
+      :nameClean=>"chicken breast",
+      :original=>"500 grams boneless chicken breast",
+      :originalName=>"boneless chicken breast",
+      :amount=>500.0,
+      :unit=>"grams",
+      :meta=>["boneless"],
+      :measures=>
+       {:us=>{:amount=>1.102, :unitShort=>"lb", :unitLong=>"pounds"},
+        :metric=>
+         {:amount=>500.0, :unitShort=>"g", :unitLong=>"grams"}}},
+     {:id=>2009,
+      :aisle=>"Spices and Seasonings",
+      :image=>"chili-powder.jpg",
+      :consistency=>"SOLID",
+      :name=>"chili powder",
+      :nameClean=>"chili powder",
+      :original=>"2-3 tsp chili powder",
+      :originalName=>"chili powder",
+      :amount=>2.0,
+      :unit=>"tsp",
+      :meta=>[],
+      :measures=>
+       {:us=>
+         {:amount=>2.0, :unitShort=>"tsps", :unitLong=>"teaspoons"},
+        :metric=>
+         {:amount=>2.0, :unitShort=>"tsps", :unitLong=>"teaspoons"}}},
+     {:id=>10111215,
+      :aisle=>"Produce",
+      :image=>"garlic-paste.png",
+      :consistency=>"SOLID",
+      :name=>"ginger and garlic paste",
+      :nameClean=>"garlic paste",
+      :original=>"4 tbsp Ginger and Garlic paste",
+      :originalName=>"Ginger and Garlic paste",
+      :amount=>4.0,
+      :unit=>"tbsp",
+      :meta=>[],
+      :measures=>
+       {:us=>{:amount=>4.0, :unitShort=>"Tbsps", :unitLong=>"Tbsps"},
+        :metric=>
+         {:amount=>4.0, :unitShort=>"Tbsps", :unitLong=>"Tbsps"}}},
+     {:id=>2047,
+      :aisle=>"Spices and Seasonings",
+      :image=>"salt.jpg",
+      :consistency=>"SOLID",
+      :name=>"salt",
+      :nameClean=>"table salt",
+      :original=>"½ tbsp. salt",
+      :originalName=>"salt",
+      :amount=>0.5,
+      :unit=>"tbsp",
+      :meta=>[],
+      :measures=>
+       {:us=>{:amount=>0.5, :unitShort=>"Tbsps", :unitLong=>"Tbsps"},
+        :metric=>
+         {:amount=>0.5, :unitShort=>"Tbsps", :unitLong=>"Tbsps"}}},
+     {:id=>2043,
+      :aisle=>"Spices and Seasonings",
+      :image=>"turmeric.jpg",
+      :consistency=>"SOLID",
+      :name=>"turmeric powder",
+      :nameClean=>"turmeric",
+      :original=>"1/4 tsp Turmeric powder",
+      :originalName=>"Turmeric powder",
+      :amount=>0.25,
+      :unit=>"tsp",
+      :meta=>[],
+      :measures=>
+       {:us=>
+         {:amount=>0.25, :unitShort=>"tsps", :unitLong=>"teaspoons"},
+        :metric=>
+         {:amount=>0.25, :unitShort=>"tsps", :unitLong=>"teaspoons"}}},
+     {:id=>1116,
+      :aisle=>"Milk, Eggs, Other Dairy",
+      :image=>"plain-yogurt.jpg",
+      :consistency=>"SOLID",
+      :name=>"yogurt",
+      :nameClean=>"yogurt",
+      :original=>"4 tbsp yogurt",
+      :originalName=>"yogurt",
+      :amount=>4.0,
+      :unit=>"tbsp",
+      :meta=>[],
+      :measures=>
+       {:us=>{:amount=>4.0, :unitShort=>"Tbsps", :unitLong=>"Tbsps"},
+        :metric=>
+         {:amount=>4.0, :unitShort=>"Tbsps", :unitLong=>"Tbsps"}}}],
+   @instructions=
+    "<ol><li>Take a large bowl mix in the ginger and garlic paste, yogurt, red chilly powder, turmeric powder, and salt.</li><li>Mix well to from smooth and thick paste, add the chicken pieces to the masala paste and  marinaded for 4 hours.</li><li>Heat enough oil in a pan to deep fry the marinaded chicken pieces. Deep fry the chicken pieces in batches till crisp and golden color.</li><li>Note: The taste of the Chicken 65 depends mainly on the amount of time it gets marinated in the masala, it is best to marinate the chicken pieces the day before.</li></ol>",
+   @summary=
+    "Chicken 65 could be just the <b>gluten free</b> recipe you've been looking for. This hor d'oeuvre has <b>121 calories</b>, <b>19g of protein</b>, and <b>3g of fat</b> per serving. For <b>$1.15 per serving</b>, this recipe <b>covers 11%</b> of your daily requirements of vitamins and minerals. This recipe serves 6. Head to the store and pick up salt, chili powder, yogurt, and a few other things to make it today. 6 people have made this recipe and would make it again. It is brought to you by Foodista. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. Overall, this recipe earns a <b>not so spectacular spoonacular score of 39%</b>. Similar recipes are <a href=\"https://spoonacular.com/recipes/i-aint-chicken-chicken-crispy-roasted-chicken-breasts-with-orange-and-cardamom-1243251\">I Ain't Chicken Chicken: Crispy Roasted Chicken Breasts with Orange and Cardamom</a>, <a href=\"https://spoonacular.com/recipes/i-aint-chicken-chicken-crispy-roasted-chicken-breasts-with-orange-and-cardamom-1230059\">I Ain't Chicken Chicken: Crispy Roasted 
+Chicken Breasts with Orange and Cardamom</a>, and <a href=\"https://spoonacular.com/recipes/i-aint-chicken-chicken-crispy-roasted-chicken-breasts-with-orange-and-cardamom-1224321\">I Ain't Chicken Chicken: Crispy Roasted Chicken Breasts with Orange and Cardamom</a>.",
+   @title="Chicken 65">>
+```
+
 ## Testing
-Run `bundle exec rspec` to run our entire test suite.
+Run `bundle exec rspec` to run our entire test suite.  Make sure you're running both the redis and sidekiq servers as detailed above.
 
 ## Contributors
 - [Antoine Aube](https://www.linkedin.com/in/antoineaube/)                - GitHub: [@Antoine-Abube](https://github.com/Antoine-Aube)
