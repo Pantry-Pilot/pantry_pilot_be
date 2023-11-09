@@ -95,11 +95,12 @@ post 'api/v1/add_recipe', to: 'api/v1/recipes#create'
 post '/api/v1/email_recipe', to: 'api/v1/emails#send_email_recipe'
 delete '/api/v1/delete_recipe', to: 'api/v1/user_recipes#destroy'
 get "/api/v1/auth/google_oauth2/callback", to: "api/v1/sessions#oauth"
+post '/api/v1/add_image', to: 'api/v1/avatars#create'
+delete '/api/v1/delete_image', to: 'api/v1/avatars#destroy'
 ``` 
 
 ## Testing
 Run `bundle exec rspec` to run our entire test suite.
-
 
 ## Contributors
 - [Antoine Aube](https://www.linkedin.com/in/antoineaube/)                - GitHub: [@Antoine-Abube](https://github.com/Antoine-Aube)

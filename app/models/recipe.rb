@@ -3,6 +3,9 @@ class Recipe < ApplicationRecord
   has_many :users, through: :user_recipes
 
   validates :recipe_id, presence: true
+
+  has_one_attached :avatar, service: :amazon
+  
   serialize :ingredients, JSON
 
   def self.email_recipe(recipe_id)
