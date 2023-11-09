@@ -11,4 +11,15 @@ class Api::V1::AvatarsController < ApplicationController
       render json: { error: recipe.errors.full_messages.to_sentence, status: 400 }
     end
   end
+
+  def destroy
+    recipe = Recipe.find(params[:id])
+
+    if recipe.avatar.attached?
+      recipe.avatar.purge
+      render json: { notice: "Image deleted succesfully", status: 200 }
+    else
+      render json: { error: recipe.errors.full_messages.to_sentence, status: 400 }
+    end
+  end
 end
