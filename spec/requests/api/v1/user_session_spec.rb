@@ -86,7 +86,7 @@ RSpec.describe "Create A User endpoint" do
         get '/api/v1/auth/google_oauth2/callback', params: mock_oauth_data
         expect(response).to have_http_status(:bad_request)
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:error]).to eq('User not found')
+        expect(json_response[:error]).to eq("User not found - Please create an account first before signing up with logging in with google")
       end
     end
   end
