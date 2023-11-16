@@ -7,3 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 test_user = User.create!(name: "test", email: "test@test.com", password: "1234")
+
+ingredient_1 = test_user.ingredients.create(name: "Broccoli", quantity: "1", exp_date: "2023-12-10")
+ingredient_2 = test_user.ingredients.create(name: "Mushrooms", quantity: "1", exp_date: "2021-12-11")
+ingredient_3 = test_user.ingredients.create(name: "Cheddar Cheese", quantity: "1", exp_date: "2023-12-12")
