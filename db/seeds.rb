@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+User.destroy_all
 
-test_user = User.create!(name: "test", email: "test@test.com", password: "1234")
+test_user = User.create(name: "test", email: "test@test.com", password: "1234")
 
 ingredient_1 = test_user.ingredients.create(name: "Broccoli", quantity: "1", exp_date: "2023-12-10")
 ingredient_2 = test_user.ingredients.create(name: "Mushrooms", quantity: "1", exp_date: "2021-12-11")
