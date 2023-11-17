@@ -1,7 +1,7 @@
 class Api::V1::UserIngredientsController < ApplicationController
   def create
     user = User.find(params[:user_id])
-    ingredient = user.ingredients.create!(ingredient_params)
+    ingredient = user.ingredients.create(ingredient_params)
     if ingredient.save
       render json: { notice: "Ingredient added succesfully", status: 204 }, status: 204
     else
@@ -18,13 +18,22 @@ class Api::V1::UserIngredientsController < ApplicationController
     else 
       render json: "No ingredients found", status: 404
     end 
+  end
 
+  def expiring_ingredients
+    user = User.find(params[:id])
+    expiring_ingredients = user.almost_expired_ingredients
+    render json: {ingredients: UserIngredientsSerializer.new(expiring_ingredients)}, status: 200
   end
 
   def destroy
     ingredient = Ingredient.find(params[:ingredient_id])
     ingredient.destroy
-    render json: { success: "Ingredient successfully removed", status: 204}
+    if ingredient.destroyed?
+      render json: { success: "Ingredient successfully removed", status: 204}
+    else
+      render json: { error: "Ingredient not deleted", status: 500}
+    end
   end
 
   private
