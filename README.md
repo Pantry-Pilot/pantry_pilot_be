@@ -31,10 +31,10 @@ This Ruby backend application is designed to interact with the Spoonacular API a
 - JSONAPI Serializer
 - CircleCI
 - Faraday
-- bcyrpt
+- bcrypt
 - sidekiq
 - ActionMailer
-- ActionStorage
+- ActiveStorage
 
 ## Testing
 - VCR
