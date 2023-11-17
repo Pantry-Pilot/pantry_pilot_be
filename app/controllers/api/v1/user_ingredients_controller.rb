@@ -18,7 +18,12 @@ class Api::V1::UserIngredientsController < ApplicationController
     else 
       render json: "No ingredients found", status: 404
     end 
+  end
 
+  def expiring_ingredients
+    user = User.find(params[:id])
+    expiring_ingredients = user.almost_expired_ingredients
+    render json: {ingredients: UserIngredientsSerializer.new(expiring_ingredients)}, status: 200
   end
 
   def destroy

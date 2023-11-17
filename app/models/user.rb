@@ -12,7 +12,7 @@ class User < ApplicationRecord
     ingredients.order(exp_date: :asc)
   end
 
-  def almost_expired
+  def almost_expired_ingredients
     ingredients.where("exp_date < ?", Date.today + 3)
   end
 end
