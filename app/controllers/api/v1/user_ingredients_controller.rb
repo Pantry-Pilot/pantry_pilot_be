@@ -11,7 +11,8 @@ class Api::V1::UserIngredientsController < ApplicationController
 
   def index
     user = User.find(params[:id])
-    ingredients  = user.ingredients
+    ingredients  = user.expiring_ingredients_asc
+
     if ingredients
       render json: {ingredients: UserIngredientsSerializer.new(ingredients)}, status: 200
     else 
@@ -21,7 +22,6 @@ class Api::V1::UserIngredientsController < ApplicationController
   end
 
   def destroy
-    # require 'pry';binding.pry
     ingredient = Ingredient.find(params[:ingredient_id])
     ingredient.destroy
     render json: { success: "Ingredient successfully removed", status: 204}

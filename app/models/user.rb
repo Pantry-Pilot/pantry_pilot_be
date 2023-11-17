@@ -7,4 +7,8 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
 
   has_secure_password
+
+  def expiring_ingredients_asc
+    ingredients.order(exp_date: :asc)
+  end
 end
