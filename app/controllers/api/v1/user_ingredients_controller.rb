@@ -20,6 +20,13 @@ class Api::V1::UserIngredientsController < ApplicationController
 
   end
 
+  def destroy
+    # require 'pry';binding.pry
+    ingredient = Ingredient.find(params[:ingredient_id])
+    ingredient.destroy
+    render json: { success: "Ingredient successfully removed", status: 204}
+  end
+
   private
 
   def ingredient_params

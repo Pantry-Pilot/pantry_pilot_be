@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   #user pantry/ingredients endpoints
   post "/api/v1/add_ingredient", to: "api/v1/user_ingredients#create"
   get "/api/v1/user_ingredients/:id", to: "api/v1/user_ingredients#index"
+  delete "/api/v1/delete_ingredient/:ingredient_id", to: "api/v1/user_ingredients#destroy"
 
   mount Sidekiq::Web => '/sidekiq'
 end
