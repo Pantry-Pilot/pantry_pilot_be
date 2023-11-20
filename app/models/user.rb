@@ -1,9 +1,18 @@
 class User < ApplicationRecord
   has_many :user_recipes, dependent: :destroy
   has_many :recipes, through: :user_recipes
-  validates :name, presence: true, uniqueness: true
+  has_many :ingredients, dependent: :destroy
+  validates :name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
 
   has_secure_password
+
+  def expiring_ingredients_asc
+    ingredients.order(exp_date: :asc)
+  end
+
+  def almost_expired_ingredients
+    ingredients.where("exp_date < ?", Date.today + 3)
+  end
 end
