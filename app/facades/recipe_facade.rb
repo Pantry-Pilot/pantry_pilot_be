@@ -1,6 +1,6 @@
 class RecipeFacade
-  def self.search(query)
-    results = SpoonacularService.new.search_recipes(query)
+  def self.search(recipe_filters)
+    results = SpoonacularService.new.search_recipes(recipe_filters)
     recipes = results[:results].map do |recipe_data|
       ApiRecipe.new(recipe_data)
     end
