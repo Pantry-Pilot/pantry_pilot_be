@@ -4,7 +4,7 @@ RSpec.describe SpoonacularService do
   context 'instance methods' do
     context '#search_recipes', :vcr do
       it 'returns recipe search' do
-        search = SpoonacularService.new.search_recipes('chicken')
+        search = SpoonacularService.new.search_recipes({ query: 'chicken' })
 
         expect(search).to be_a(Hash)
         expect(search[:number]).to be 10
